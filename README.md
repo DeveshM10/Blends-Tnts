@@ -11,7 +11,7 @@ The project is ready for deployment on Vercel. Redirects are configured for the 
 
 - **Hero Carousel**: Dynamic 3-image carousel with smooth transitions and glassmorphism overlays.
 - **Interactive Committees**: 3D-styled committee slider with detailed agendas and responsive design.
-- **Venue Integration**: Interactive Google Maps integration for Kirori Mal College, University of Delhi.
+- **Secret Venue Reveal**: Placeholder UI for the upcoming venue announcement.
 - **Dynamic Timeline**: Beautifully animated event schedule for both conference days.
 - **Premium UI/UX**: Built with Tailwind CSS, Framer Motion for animations, and Lucide icons.
 - **Fully Responsive**: Optimized for mobile, tablet, and desktop viewing.

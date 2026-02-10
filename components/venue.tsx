@@ -1,6 +1,7 @@
 "use client"
 
-import { MapPin, Calendar, Clock } from "lucide-react"
+import { MapPin, Calendar, Clock, Lock } from "lucide-react"
+import { motion } from "framer-motion"
 
 export default function Venue() {
     return (
@@ -19,11 +20,13 @@ export default function Venue() {
                             <div className="relative z-10">
                                 <MapPin className="w-12 h-12 text-blue-400 mb-4" />
                                 <h3 className="text-2xl font-bold text-white mb-4">Location</h3>
-                                <p className="text-gray-300 text-lg leading-relaxed">
-                                    Kirori Mal College<br />
-                                    University of Delhi<br />
-                                    Delhi, India
-                                </p>
+                                <div className="space-y-2">
+                                    <div className="flex items-center gap-2 text-gray-400 bg-white/5 px-4 py-2 rounded-lg border border-white/10 backdrop-blur-md">
+                                        <Lock className="w-4 h-4" />
+                                        <span className="font-bold tracking-widest uppercase">Revealing Soon</span>
+                                    </div>
+                                    <p className="text-gray-500 text-sm">A premier institution in New Delhi, India</p>
+                                </div>
                             </div>
                         </div>
 
@@ -52,16 +55,54 @@ export default function Venue() {
                         </div>
                     </div>
 
-                    {/* Google Maps */}
-                    <div className="relative h-[600px] rounded-2xl overflow-hidden border border-gray-700 shadow-2xl">
-                        <iframe
-                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3500.221053188554!2d77.2077194!3d28.683033399999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd91b4972361%3A0xd114167941a0a5ac!2sKirori%20Mal%20College!5e0!3m2!1sen!2sin!4v1770714652666!5m2!1sen!2sin"
-                            className="w-full h-full rounded-2xl"
-                            style={{ border: 0 }}
-                            allowFullScreen
-                            loading="lazy"
-                            referrerPolicy="no-referrer-when-downgrade"
-                        />
+                    {/* Reveal Placeholder */}
+                    <div className="relative h-[600px] rounded-2xl overflow-hidden border border-gray-700 shadow-2xl bg-slate-900 flex items-center justify-center group cursor-help">
+                        {/* Animated Background Gradients */}
+                        <div className="absolute inset-0 opacity-30">
+                            <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-blue-600 rounded-full blur-[120px] animate-pulse" />
+                            <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-600 rounded-full blur-[120px] animate-pulse delay-75" />
+                        </div>
+
+                        <div className="relative z-10 text-center px-8">
+                            <motion.div
+                                animate={{
+                                    rotate: [0, 5, -5, 0],
+                                    scale: [1, 1.05, 1]
+                                }}
+                                transition={{
+                                    duration: 4,
+                                    repeat: Infinity,
+                                    ease: "easeInOut"
+                                }}
+                                className="inline-block p-6 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl mb-8"
+                            >
+                                <Lock className="w-20 h-20 text-blue-500 mx-auto" />
+                            </motion.div>
+
+                            <h3 className="text-4xl md:text-5xl font-black text-white mb-6 tracking-tighter uppercase italic">
+                                Secret Venue
+                            </h3>
+
+                            <div className="h-1.5 w-32 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-8" />
+
+                            <p className="text-gray-400 text-xl font-medium max-w-sm mx-auto leading-relaxed">
+                                Stay tuned as we prepare to unveil Delhi's most prestigious institution.
+                            </p>
+
+                            <div className="mt-12 flex justify-center gap-1">
+                                {[0, 1, 2].map((i) => (
+                                    <motion.div
+                                        key={i}
+                                        animate={{ opacity: [0.2, 1, 0.2] }}
+                                        transition={{ duration: 1.5, repeat: Infinity, delay: i * 0.2 }}
+                                        className="w-2 h-2 rounded-full bg-blue-500"
+                                    />
+                                ))}
+                            </div>
+                        </div>
+
+                        {/* Scanline Effect */}
+                        <div className="absolute inset-0 pointer-events-none bg-[linear-gradient(rgba(18,16,16,0)_50%,rgba(0,0,0,0.25)_50%),linear-gradient(90deg,rgba(255,0,0,0.06),rgba(0,255,0,0.02),rgba(0,0,255,0.06))] bg-[length:100%_2px,3px_100%] z-20 opacity-20" />
                     </div>
                 </div>
             </div>

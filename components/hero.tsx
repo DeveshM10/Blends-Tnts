@@ -53,7 +53,7 @@ export default function Hero() {
             </h3>
 
             <p className="text-sm md:text-base lg:text-lg leading-relaxed mb-8 md:mb-12 text-gray-100 max-w-2xl">
-              The one-of-a-kind National Youth Summit and Model United Nations conference where 500+ delegates from Grade 6 to undergraduates debate global issues. July 11–12, 2026 at Kirori Mal College, Delhi University.
+              The one-of-a-kind National Youth Summit and Model United Nations conference where 500+ delegates from Grade 6 to undergraduates debate global issues. July 11–12, 2026 at a premier institution in Delhi.
             </p>
 
             <button

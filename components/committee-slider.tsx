@@ -104,34 +104,37 @@ export default function CommitteeSlider() {
               return (
                 <div
                   key={committee.id}
+                  className="absolute w-full max-w-lg md:max-w-3xl transition-all duration-700 ease-in-out"
                   style={{
                     transform,
                     zIndex,
-                    transition: 'all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1)',
                   }}
-                  className="absolute w-full max-w-md md:max-w-2xl"
                 >
-                  <div className="rounded-2xl overflow-hidden shadow-2xl bg-gray-800">
-                    <div className="relative h-64 md:h-96 w-full overflow-hidden">
+                  <div className={`relative rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br ${committee.color}`}>
+                    <div className="relative h-96 md:h-[500px]">
                       <Image
-                        src={committee.image || "/placeholder.svg"}
-                        alt={committee.fullName}
+                        src={committee.image}
+                        alt={committee.name}
                         fill
                         className="object-cover"
-                        priority={isCenter}
                       />
-                    </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black via-black/60 to-transparent" />
 
-                    <div className="p-6 md:p-8 bg-gray-800">
-                      <div className="flex items-center gap-3 mb-3">
-                        <div className={`w-1 h-8 bg-gradient-to-b ${committee.color}`} />
-                        <h3 className="text-2xl md:text-3xl font-bold text-white">{committee.name}</h3>
-                      </div>
-                      <p className="text-gray-300 text-sm md:text-base mb-4 font-semibold">{committee.fullName}</p>
-                      <div className="border-t border-gray-700 pt-4">
-                        <p className="text-gray-200 text-sm md:text-base leading-relaxed italic">
-                          {committee.agenda}
+                      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
+                        <h3 className="text-3xl md:text-4xl font-black text-white mb-2">
+                          {committee.name}
+                        </h3>
+                        <p className="text-sm md:text-base text-blue-200 mb-4 font-medium">
+                          {committee.fullName}
                         </p>
+
+                        {/* Agenda Section - Improved Visibility */}
+                        <div className="bg-black/40 backdrop-blur-sm rounded-lg p-4 border border-white/20">
+                          <p className="text-xs uppercase tracking-wider text-blue-300 font-bold mb-2">Agenda</p>
+                          <p className="text-sm md:text-base leading-relaxed text-white font-medium">
+                            {committee.agenda}
+                          </p>
+                        </div>
                       </div>
                     </div>
                   </div>

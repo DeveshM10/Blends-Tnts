@@ -67,7 +67,7 @@ const committees: Committee[] = [
     name: 'JSP',
     fullName: 'Joint Session Parliament',
     agenda: 'Deliberation on the Uniform Civil Code (UCC) Bill, 2026, with special emphasis on Gender Justice and Religious Personal Laws',
-    image: 'https://images.unsplash.com/photo-1589923188900-85dae523342b?w=800&h=600&fit=crop',
+    image: '/images/jsp-committee.jpg',
     color: 'from-amber-600 to-orange-800',
   },
   {

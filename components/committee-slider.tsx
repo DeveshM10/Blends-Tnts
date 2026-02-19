@@ -67,7 +67,7 @@ const committees: Committee[] = [
     name: 'JSP',
     fullName: 'Joint Session Parliament',
     agenda: 'Deliberation on the Uniform Civil Code (UCC) Bill, 2026, with special emphasis on Gender Justice and Religious Personal Laws',
-    image: 'https://images.unsplash.com/photo-1590487988256-9ed24133863e?w=800&h=600&fit=crop', // High-quality Indian Parliament visual
+    image: 'https://upload.wikimedia.org/wikipedia/commons/e/ee/View_of_Lok_Sabha_chamber_in_the_New_Parliament_building%2C_New_Delhi.jpg', // Official New Lok Sabha Chamber visual
     color: 'from-amber-600 to-orange-800',
   },
   {

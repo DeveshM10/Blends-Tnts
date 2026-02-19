@@ -46,6 +46,38 @@ const committees: Committee[] = [
     image: 'https://images.unsplash.com/photo-1505373877841-8d25f7d46678?w=800&h=600&fit=crop',
     color: 'from-orange-600 to-orange-800',
   },
+  {
+    id: 5,
+    name: 'UNEP',
+    fullName: 'United Nations Environment Programme',
+    agenda: 'Strategies to Combat Marine Plastic Pollution and the Management of Single-Use Plastics',
+    image: 'https://images.unsplash.com/photo-1621451537084-482c73073a0f?w=800&h=600&fit=crop',
+    color: 'from-emerald-600 to-teal-800',
+  },
+  {
+    id: 6,
+    name: 'UNW',
+    fullName: 'UN Women',
+    agenda: 'Ensuring the Safety of Women in Digital Spaces: Combating Cyberstalking and Online Harassment',
+    image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=800&h=600&fit=crop',
+    color: 'from-rose-600 to-pink-800',
+  },
+  {
+    id: 7,
+    name: 'JSP',
+    fullName: 'Joint Session Parliament',
+    agenda: 'Deliberation on the Uniform Civil Code (UCC) Bill, 2026, with special emphasis on Gender Justice and Religious Personal Laws',
+    image: 'https://images.unsplash.com/photo-1589262804704-c5aa9e661622?w=800&h=600&fit=crop',
+    color: 'from-amber-600 to-orange-800',
+  },
+  {
+    id: 8,
+    name: 'IP',
+    fullName: 'International Press',
+    agenda: 'Journalism, Caricature, Photography',
+    image: 'https://images.unsplash.com/photo-1504711432863-1f1906cf9e1d?w=800&h=600&fit=crop',
+    color: 'from-slate-600 to-gray-800',
+  },
 ]
 
 export default function CommitteeSlider() {

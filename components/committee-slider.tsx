@@ -67,7 +67,7 @@ const committees: Committee[] = [
     name: 'JSP',
     fullName: 'Joint Session Parliament',
     agenda: 'Deliberation on the Uniform Civil Code (UCC) Bill, 2026, with special emphasis on Gender Justice and Religious Personal Laws',
-    image: 'https://images.unsplash.com/photo-1589262804704-c5aa9e661622?w=800&h=600&fit=crop',
+    image: 'https://images.unsplash.com/photo-1589923188900-85dae523342b?w=800&h=600&fit=crop',
     color: 'from-amber-600 to-orange-800',
   },
   {
@@ -75,7 +75,7 @@ const committees: Committee[] = [
     name: 'IP',
     fullName: 'International Press',
     agenda: 'Journalism, Caricature, Photography',
-    image: 'https://images.unsplash.com/photo-1504711432863-1f1906cf9e1d?w=800&h=600&fit=crop',
+    image: 'https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=800&h=600&fit=crop',
     color: 'from-slate-600 to-gray-800',
   },
 ]
@@ -178,7 +178,7 @@ export default function CommitteeSlider() {
           {/* Navigation Buttons */}
           <button
             onClick={prev}
-            className="absolute left-0 top-1/2 transform -translate-y-1/2 z-20 p-2 md:p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-all duration-300 -ml-6 md:-ml-12"
+            className="absolute left-4 md:left-10 top-1/2 transform -translate-y-1/2 z-20 p-2 md:p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-all duration-300 shadow-xl"
             aria-label="Previous committee"
           >
             <ChevronLeft className="w-6 h-6" />
@@ -186,7 +186,7 @@ export default function CommitteeSlider() {
 
           <button
             onClick={next}
-            className="absolute right-0 top-1/2 transform -translate-y-1/2 z-20 p-2 md:p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-all duration-300 -mr-6 md:-mr-12"
+            className="absolute right-4 md:right-10 top-1/2 transform -translate-y-1/2 z-20 p-2 md:p-3 bg-blue-600 hover:bg-blue-700 text-white rounded-full transition-all duration-300 shadow-xl"
             aria-label="Next committee"
           >
             <ChevronRight className="w-6 h-6" />
